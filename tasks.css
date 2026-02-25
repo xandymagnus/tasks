@@ -126,3 +126,8 @@ main {
 .delete:hover {
     background-color: #cc0000;
 }
+
+.done span {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
