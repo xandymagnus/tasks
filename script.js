@@ -12,7 +12,9 @@ form.addEventListener("submit", function(event){
     if (email === "" || senha === "") {
         alert("Preencha todos os campos!");
         return;
-    }
+    };
 
     window.location.href = "task.html";
-})
+
+    
+});
