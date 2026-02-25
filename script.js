@@ -2,9 +2,9 @@ const form = document.getElementById("form");
 const inputEmail = document.getElementById("email");
 const inputSenha = document.getElementById("senha");
 
-form.addEventListener("submit", function(event){
+form.addEventListener("submit", function(event) {
     
-    event.defaultPrevented();
+    event.preventDefault();
 
     const email = inputEmail.value;
     const senha = inputSenha.value;
@@ -14,7 +14,5 @@ form.addEventListener("submit", function(event){
         return;
     };
 
-    window.location.href = "task.html";
-
-    
+    window.location.href = "/tasks.html";
 });
