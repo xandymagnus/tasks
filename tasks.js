@@ -1,6 +1,6 @@
 const form = document.getElementById("taskForm");
-const input = document.querySelector("input");
-const lista = Document.querySelector(".task-list ul");
+const input = form.querySelector("input");
+const lista = document.querySelector(".task-list ul");
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -16,8 +16,10 @@ form.addEventListener("submit", function(event) {
     input.value = "";
 });
 
-function criarTarefa (texto) {
+function criarTarefa(texto) {
+
     const li = document.createElement("li");
+
     const span = document.createElement("span");
         span.textContent = texto;
 
@@ -31,21 +33,20 @@ function criarTarefa (texto) {
         btnComplete.addEventListener("click", function() {
             li.classList.toggle("done");
         });
-    
+        
     const btnDelete = document.createElement("button");
-    btnDelete.textContent = "✖";
-    btnDelete.classList.add("delete");
+        btnDelete.textContent = "✖";
+        btnDelete.classList.add("delete");
 
     btnDelete.addEventListener("click", function() {
-        li.remove() ;
+        li.remove();
     });
 
     actions.appendChild(btnComplete);
     actions.appendChild(btnDelete);
 
-    li.appendChild(btnComplete);
-    li.appendChild(btnDelete);
+    li.appendChild(span);
+    li.appendChild(actions);
 
-    lista.appendChild(li)
-
+    lista.appendChild(li);
 }
