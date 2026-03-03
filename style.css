@@ -23,9 +23,13 @@ input {
 button {
     width: 100%;
     padding: 8px;
-    background-color: blue;
+    background-color: #03852a;
     color: white;
     border: none;
     border-radius: 12px;
+}
+
+button:hover {
+    background-color: #01591b;
 }
 
