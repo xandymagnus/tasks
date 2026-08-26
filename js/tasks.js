@@ -2,6 +2,13 @@ const form = document.getElementById("taskForm");
 const input = form.querySelector("input");
 const lista = document.querySelector(".task-list ul");
 
+const btnSair = document.getElementById("logout")
+
+btnSair.addEventListener("click", (event) => {
+    event.preventDefault()
+    window.location.href = "/html/index.html";
+});
+
 form.addEventListener("submit", function(event) {
     event.preventDefault();
 
