@@ -14,5 +14,5 @@ form.addEventListener("submit", function(event) {
         return;
     };
 
-    window.location.href = "/tasks.html";
+    window.location.href = "/html/tasks.html";
 });
